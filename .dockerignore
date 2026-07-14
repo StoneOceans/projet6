@@ -1,0 +1,14 @@
+.git
+.github
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+.coverage
+htmlcov
+mlruns
+mlartifacts
+notebooks
+screenshots
+reports
+production_data
