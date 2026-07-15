@@ -1,6 +1,7 @@
 ﻿from time import perf_counter
 from uuid import uuid4
 
+
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -11,7 +12,7 @@ from app.database import (
 )
 from app.model_loader import model
 from app.prediction import MODEL_VERSION, predict_client
-from app.model_loader import best_threshold
+from app.model_loader import best_threshold, feature_columns, model
 from app.schemas import (
     HealthResponse,
     PredictionRequest,
@@ -60,6 +61,14 @@ def health() -> HealthResponse:
     )
 
 
+@app.get("/example")
+def prediction_example() -> dict:
+    return {
+        "features": {
+            column: 0
+            for column in feature_columns
+        }
+    }
 @app.post("/predict", response_model=PredictionResponse)
 def predict(payload: PredictionRequest) -> PredictionResponse:
     request_id = str(uuid4())
@@ -138,7 +147,6 @@ def predict(payload: PredictionRequest) -> PredictionResponse:
             status_code=500,
             detail="Erreur interne lors de la prédiction.",
         ) from error
-
 
 @app.get("/monitoring/predictions")
 def monitoring_predictions(
