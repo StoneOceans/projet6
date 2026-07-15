@@ -1,8 +1,8 @@
-\# Projet 6 — Confirmez vos compétences en MLOps (Partie 2/2)
+# Projet 6 — Confirmez vos compétences en MLOps (Partie 2/2)
 
 
 
-\## Présentation
+## Présentation
 
 
 
@@ -10,23 +10,23 @@ L’objectif est de mettre à disposition une API capable de :
 
 
 
-\- recevoir les données d’un client ;
+- recevoir les données d’un client ;
 
-\- calculer une probabilité de défaut ;
+- calculer une probabilité de défaut ;
 
-\- appliquer un seuil métier ;
+- appliquer un seuil métier ;
 
-\- retourner une décision de crédit ;
+- retourner une décision de crédit ;
 
-\- enregistrer les appels réalisés en production ;
+- enregistrer les appels réalisés en production ;
 
-\- surveiller la latence et les erreurs ;
+- surveiller la latence et les erreurs ;
 
-\- détecter une éventuelle dérive des données.
+- détecter une éventuelle dérive des données.
 
 
 
-\## Modèle utilisé
+## Modèle utilisé
 
 
 
@@ -36,7 +36,7 @@ Le modèle final est un pipeline de machine learning enregistré dans :
 
 ```text
 
-models/best\_lightgbm.joblib
+models/best_lightgbm.joblib
 
 ## Limite du déploiement
 
