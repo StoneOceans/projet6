@@ -38,3 +38,9 @@ Le modèle final est un pipeline de machine learning enregistré dans :
 
 models/best\_lightgbm.joblib
 
+## Limite du déploiement
+
+Le pipeline CI/CD exécute automatiquement les tests et construit l’image Docker.
+
+L’étape de déploiement est simulée, car aucun environnement cloud permanent n’a été utilisé dans le cadre de ce prototype. La construction réussie de l’image Docker sur GitHub Actions démontre toutefois que l’application est déployable sur une plateforme compatible avec Docker.
+
