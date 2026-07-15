@@ -10,7 +10,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 FEATURES_PATH = BASE_DIR / "models" / "feature_columns.json"
 
 POSSIBLE_DATA_PATHS = [
-    BASE_DIR / "data" / "processed" / "X_test_model.csv",
     BASE_DIR / "data" / "processed" / "home_credit_test_processed.csv",
     BASE_DIR / "data" / "processed" / "home_credit_train_processed.csv",
 ]
