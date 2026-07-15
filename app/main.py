@@ -154,7 +154,27 @@ def monitoring_predictions(
 ) -> dict:
     predictions = read_recent_predictions(limit=limit)
 
+    readable_predictions = []
+
+    for row in predictions:
+        readable_predictions.append(
+            {
+                "id": row["id"],
+                "request_id": row["request_id"],
+                "timestamp": row["timestamp"],
+                "prediction": row["prediction"],
+                "probability": row["probability"],
+                "threshold": row["threshold"],
+                "decision": row["decision"],
+                "inference_time_ms": row["inference_time_ms"],
+                "response_time_ms": row["response_time_ms"],
+                "status_code": row["status_code"],
+                "error_message": row["error_message"],
+                "model_version": row["model_version"],
+            }
+        )
+
     return {
-        "count": len(predictions),
-        "predictions": predictions,
+        "count": len(readable_predictions),
+        "predictions": readable_predictions,
     }
