@@ -6,3 +6,9 @@ mlruns/
 data/raw/*.csv
 data/processed/*.csv
 .DS_Store
+
+# Fichiers g?n?r?s localement
+.coverage
+mlflow.db
+htmlcov/
+.pytest_cache/
