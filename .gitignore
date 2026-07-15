@@ -3,8 +3,6 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 mlruns/
-models/*.pkl
-models/*.joblib
 data/raw/*.csv
 data/processed/*.csv
 .DS_Store
